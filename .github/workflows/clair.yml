@@ -16,7 +16,8 @@ jobs:
       run: |
         docker network prune -f
         docker volume prune -f
-        docker-compose up --detach
+        docker-compose up -d
         docker logs clair-db
         docker logs clair
+        echo "-----------**************-------------"
         docker-compose exec clair clairctl report vulnerables/web-dvwa
