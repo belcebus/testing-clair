@@ -1,0 +1,19 @@
+name: prueba-POC
+
+on: [push,workflow_dispatch]
+
+jobs:  
+  clair-scan:
+    name: Scan docker image with clair
+    runs-on: ubuntu-latest
+    steps:
+    - name: Checkout
+      uses: actions/checkout@v1
+
+#        docker-compose -f clair/docker-compose.yml up -d
+
+    - name: Setup then environment
+      run: |
+        docker-compose -v
+        docker-compose -f docker-compose.yml up -d
+        docker-compose exec clair clairctl report vulnerables/web-dvwa
