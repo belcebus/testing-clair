@@ -14,8 +14,8 @@ jobs:
 
     - name: Setup then environment
       run: |
-        docker network prune
-        docker volume prune
+        docker network prune -f
+        docker volume prune -f
         docker-compose -f docker-compose.yml up -d
         docker logs clair-db
         docker logs clair
