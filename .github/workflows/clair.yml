@@ -23,5 +23,6 @@ jobs:
         echo "-----------**************-------------"
     - name: Run the analysis
       run: |
+        sleep 30
         docker ps
         docker-compose exec clair clairctl report vulnerables/web-dvwa
