@@ -15,5 +15,6 @@ jobs:
     - name: Setup then environment
       run: |
         docker-compose -f docker-compose.yml up -d
+        docker logs clair-db
         docker logs clair
         docker-compose exec clair clairctl report vulnerables/web-dvwa
