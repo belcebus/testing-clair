@@ -21,3 +21,7 @@ jobs:
         docker logs clair-db
         docker logs clair
         echo "-----------**************-------------"
+    - name: Run the analysis
+      run: |
+        docker ps
+        docker-compose exec clair clairctl report vulnerables/web-dvwa
