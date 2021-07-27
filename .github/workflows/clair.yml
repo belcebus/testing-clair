@@ -25,4 +25,4 @@ jobs:
       run: |
         sleep 30
         docker ps
-        docker-compose exec clair clairctl report vulnerables/web-dvwa
+        docker exec clair clairctl report vulnerables/web-dvwa
