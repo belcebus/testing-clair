@@ -3,7 +3,7 @@ version: '2.4'
 services:
   postgres:
     container_name: clair-db
-    image: postgres@sha256:fab2a4a9fa7af0464b665f90818894481b524035ddc337bf09d5321624cee644
+    image: arminc/clair-db:latest
     cpus: '0.50'
     mem_limit: 2g
     volumes:
