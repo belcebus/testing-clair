@@ -15,24 +15,24 @@ matcher:
   updater_sets:
   - "alpine"
 #  - "aws"
-  - "debian"
+#  - "debian"
 # - "oracle"
 #  - "photon"
 #  - "pyupio"
-  - "rhel"
+#  - "rhel"
 #  - "suse"
-  - "ubuntu"
+#  - "ubuntu"
 matchers:
   names:
   - "alpine"
 # - "aws"
-  - "debian"
+#  - "debian"
 # - "oracle"
 # - "photon"
 # - "python"
-  - "rhel"
+#  - "rhel"
 # - "suse"
-  - "ubuntu"
+#  - "ubuntu"
 # - "crda"
   config:
     crda:
